@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Email Classification</title>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+  <h2>Email Classification</h2>
+
+  <label>Email Topic:</label>
+  <input type="text" id="emailTopic" />
+
+  <label>Subtopic:</label>
+  <input type="text" id="subTopic" />
+
+  <label>Classification:</label>
+  <select id="classification">
+    <option value="">Select</option>
+    <option value="Internal">Internal</option>
+    <option value="Confidential">Confidential</option>
+    <option value="Public">Public</option>
+  </select>
+
+  <label>Email going to:</label>
+  <div>
+    <input type="radio" id="internal" name="emailTo" value="Internal">
+    <label for="internal">Internal</label>
+
+    <input type="radio" id="external" name="emailTo" value="External">
+    <label for="external">External</label>
+  </div>
+
+  <label>Email Subject:</label>
+  <input type="text" id="emailSubject" />
+
+  <div class="buttons">
+    <button id="sendBtn" disabled>Send</button>
+    <button id="resetBtn">Reset</button>
+    <button id="ignoreBtn">Ignore</button>
+    <button id="dontSendBtn">Don't Send</button>
+  </div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>

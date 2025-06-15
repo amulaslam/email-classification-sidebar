@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AL-AALI Email Classification</title>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="https://amulaslam.github.io/email-classification-sidebar/assets/logo.png" alt="Al Aali Logo" class="logo" />
+    <h2>AL-AALI Email Classification</h2>
+
+    <label>Email About</label>
+    <select id="emailTopic">
+      <option value="">Select Topic</option>
+      <option value="IT">IT</option>
+      <option value="HR">HR</option>
+      <option value="Finance">Finance</option>
+    </select>
+
+    <select id="subTopic">
+      <option value="">Select Subtopic</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Software">Software</option>
+      <option value="Printer">Printer</option>
+    </select>
+
+    <label>Email Classification</label>
+    <select id="classification">
+      <option value="">Select Classification</option>
+      <option value="Procurement">Procurement</option>
+      <option value="Confidential">Confidential</option>
+      <option value="Public">Public</option>
+    </select>
+
+    <label>Email Subject</label>
+    <input type="text" id="emailSubject" />
+
+    <label>Email going to</label>
+    <div class="radio-group">
+      <label><input type="radio" name="emailTo" value="Internal" /> Internal</label>
+      <label><input type="radio" name="emailTo" value="Partners" /> Partners</label>
+      <label><input type="radio" name="emailTo" value="Principals" /> Principals</label>
+      <label><input type="radio" name="emailTo" value="3rd Party" /> 3rd Party</label>
+    </div>
+
+    <div class="buttons">
+      <button id="sendBtn" disabled>Send</button>
+      <button id="resetBtn">Reset</button>
+      <button id="ignoreBtn">Ignore</button>
+      <button id="dontSendBtn">Don't Send</button>
+    </div>
+
+    <div class="version">Version Number : v1.4.2.0</div>
+  </div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>

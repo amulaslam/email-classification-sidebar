@@ -1,52 +1,40 @@
-/* Reset and base styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+body {
   font-family: Arial, sans-serif;
   background: #fff;
+  margin: 0;
+  padding: 20px;
   overflow: hidden;
 }
 
-/* Center container and allow internal scroll if needed */
 .container {
-  max-width: 400px;
-  height: 100%;
+  max-width: 380px;
   margin: 0 auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 0 10px #ddd;
   border: 1px solid #ccc;
+  padding: 20px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto;
-  box-sizing: border-box;
+  box-shadow: 0px 0px 10px #ddd;
+  background: white;
 }
 
-/* Logo styling */
 .logo {
   width: 80px;
   float: right;
   margin-top: -10px;
 }
 
-/* Heading */
 h2 {
   color: #003366;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Labels */
 label {
   display: block;
   margin: 12px 0 5px;
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
 }
 
-/* Inputs and dropdowns */
 input[type="text"],
 select {
   width: 100%;
@@ -57,12 +45,10 @@ select {
   font-size: 14px;
 }
 
-/* Radio buttons grouped horizontally */
 .radio-group {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 10px;
   margin: 10px 0 20px;
 }
 
@@ -72,16 +58,16 @@ select {
   gap: 5px;
   font-weight: normal;
   white-space: nowrap;
+  font-size: 14px;
 }
 
-/* Buttons */
 button {
   padding: 8px 18px;
+  margin: 5px;
   border: none;
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  margin: 5px;
   color: white;
 }
 
@@ -89,22 +75,15 @@ button {
   background-color: #999;
 }
 
-#resetBtn {
-  background-color: #0a2c72;
-}
-
-#ignoreBtn {
-  background-color: #0a2c72;
-}
-
+#resetBtn,
+#ignoreBtn,
 #dontSendBtn {
   background-color: #0a2c72;
 }
 
-/* Version text */
 .version {
   font-size: 11px;
   color: #555;
-  margin-top: 10px;
   text-align: right;
+  margin-top: 10px;
 }

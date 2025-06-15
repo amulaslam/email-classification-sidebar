@@ -25,6 +25,9 @@ body {
 h2 {
   color: #003366;
   margin-bottom: 20px;
+  text-align: center;
+}
+
 }
 
 label {

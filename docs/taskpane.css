@@ -14,9 +14,12 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: 75px;
+  height: auto;
   float: right;
-  margin-top: -10px;
+  margin-top: -5px;
+}
+
 }
 
 h2 {

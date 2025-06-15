@@ -1,35 +1,32 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>AL-AALI Email Classification</title>
-  <link rel="stylesheet" href="taskpane.css" />
+  <title>Email Classification</title>
+  <link rel="stylesheet" href="https://amulaslam.github.io/email-classification-sidebar/taskpane.css" />
 </head>
 <body>
-<div class="container">
-  <img src="icon-128.png" alt="Al Aali Logo" class="logo" />
-  <h2>AL-AALI Email Classification</h2>
+  <div class="container">
+    <img src="https://amulaslam.github.io/email-classification-sidebar/icon-80.png" class="logo" alt="Al Aali Logo" />
+    <h2>AL-AALI Email Classification</h2>
 
     <label>Email About</label>
     <select id="emailTopic">
       <option value="">Select Topic</option>
       <option value="IT">IT</option>
       <option value="HR">HR</option>
-      <option value="Finance">Finance</option>
     </select>
 
     <select id="subTopic">
       <option value="">Select Subtopic</option>
-      <option value="Laptop">Laptop</option>
-      <option value="Software">Software</option>
-      <option value="Printer">Printer</option>
+      <option value="02000 - IT">02000 - IT</option>
+      <option value="03000 - HR">03000 - HR</option>
     </select>
 
     <label>Email Classification</label>
     <select id="classification">
       <option value="">Select Classification</option>
-      <option value="Procurement">Procurement</option>
+      <option value="Internal">Internal</option>
       <option value="Confidential">Confidential</option>
       <option value="Public">Public</option>
     </select>
@@ -39,13 +36,13 @@
 
     <label>Email going to</label>
     <div class="radio-group">
-      <label><input type="radio" name="emailTo" value="Internal" /> Internal</label>
-      <label><input type="radio" name="emailTo" value="Partners" /> Partners</label>
-      <label><input type="radio" name="emailTo" value="Principals" /> Principals</label>
-      <label><input type="radio" name="emailTo" value="3rd Party" /> 3rd Party</label>
+      <label><input type="radio" name="emailTo" value="Internal"> Internal</label>
+      <label><input type="radio" name="emailTo" value="Partners"> Partners</label>
+      <label><input type="radio" name="emailTo" value="Principals"> Principals</label>
+      <label><input type="radio" name="emailTo" value="3rd Party"> 3rd Party</label>
     </div>
 
-    <div class="buttons">
+    <div>
       <button id="sendBtn" disabled>Send</button>
       <button id="resetBtn">Reset</button>
       <button id="ignoreBtn">Ignore</button>
@@ -55,6 +52,6 @@
     <div class="version">Version Number : v1.4.2.0</div>
   </div>
 
-  <script src="taskpane.js"></script>
+  <script src="https://amulaslam.github.io/email-classification-sidebar/taskpane.js"></script>
 </body>
 </html>

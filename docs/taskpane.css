@@ -40,12 +40,14 @@ select {
 
 .radio-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
   margin: 10px 0 20px;
 }
 
 .radio-group label {
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 5px;

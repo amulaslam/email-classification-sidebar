@@ -1,82 +1,110 @@
-body {
+/* Reset and base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
   background: #fff;
-  margin: 0;
-  padding: 20px;
+  overflow: hidden;
 }
 
+/* Center container and allow internal scroll if needed */
 .container {
-  max-width: 380px;
-  border: 1px solid #ccc;
+  max-width: 400px;
+  height: 100%;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #ddd;
   background: white;
+  box-shadow: 0 0 10px #ddd;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
+/* Logo styling */
 .logo {
-  width: 60px;
+  width: 80px;
   float: right;
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
+/* Heading */
 h2 {
   color: #003366;
   margin-bottom: 20px;
 }
 
+/* Labels */
 label {
   display: block;
   margin: 12px 0 5px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
+/* Inputs and dropdowns */
 input[type="text"],
 select {
   width: 100%;
   padding: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
 }
 
+/* Radio buttons grouped horizontally */
 .radio-group {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
   flex-wrap: nowrap;
+  gap: 10px;
   margin: 10px 0 20px;
 }
 
 .radio-group label {
-  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 5px;
+  font-weight: normal;
+  white-space: nowrap;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
+/* Buttons */
 button {
-  padding: 8px 14px;
+  padding: 8px 18px;
   border: none;
   border-radius: 5px;
-  background-color: #003366;
-  color: white;
+  font-size: 14px;
   cursor: pointer;
+  margin: 5px;
+  color: white;
 }
 
-button:disabled {
+#sendBtn {
   background-color: #999;
-  cursor: not-allowed;
 }
 
+#resetBtn {
+  background-color: #0a2c72;
+}
+
+#ignoreBtn {
+  background-color: #0a2c72;
+}
+
+#dontSendBtn {
+  background-color: #0a2c72;
+}
+
+/* Version text */
 .version {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #666;
+  font-size: 11px;
+  color: #555;
+  margin-top: 10px;
   text-align: right;
 }

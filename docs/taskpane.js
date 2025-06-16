@@ -32,23 +32,10 @@ function populateDropdown(elementId, items, textField = "Title", valueField = "V
   items.forEach(item => {
     const option = document.createElement("option");
     option.value = item[valueField] || item[textField];
-    option.text = item[textField];
+    option.textContent = item[textField];
     select.appendChild(option);
   });
 }
-
-document.addEventListener("DOMContentLoaded", async () => {
-  const topicItems = await fetchListItems(lists.topic);
-  populateDropdown("emailTopic", topicItems);
-
-  const subtopicItems = await fetchListItems(lists.subtopic);
-  populateDropdown("subTopic", subtopicItems);
-
-  const classificationItems = await fetchListItems(lists.classification);
-  populateDropdown("classification", classificationItems);
-
-  validateForm();
-});
 
 function validateForm() {
   const topic = document.getElementById("emailTopic").value.trim();
@@ -70,9 +57,25 @@ function resetForm() {
   validateForm();
 }
 
-document.getElementById("emailTopic").addEventListener("change", validateForm);
-document.getElementById("subTopic").addEventListener("change", validateForm);
-document.getElementById("classification").addEventListener("change", validateForm);
-document.getElementById("emailSubject").addEventListener("input", validateForm);
-document.querySelectorAll("input[name='emailTo']").forEach(el => el.addEventListener("change", validateForm));
-document.getElementById("resetBtn").addEventListener("click", resetForm);
+document.addEventListener("DOMContentLoaded", async () => {
+  // Load and populate SharePoint list data
+  const topicItems = await fetchListItems(lists.topic);
+  populateDropdown("emailTopic", topicItems);
+
+  const subtopicItems = await fetchListItems(lists.subtopic);
+  populateDropdown("subTopic", subtopicItems);
+
+  const classificationItems = await fetchListItems(lists.classification);
+  populateDropdown("classification", classificationItems);
+
+  // Initial form validation
+  validateForm();
+
+  // Attach field listeners
+  document.getElementById("emailTopic").addEventListener("change", validateForm);
+  document.getElementById("subTopic").addEventListener("change", validateForm);
+  document.getElementById("classification").addEventListener("change", validateForm);
+  document.getElementById("emailSubject").addEventListener("input", validateForm);
+  document.querySelectorAll("input[name='emailTo']").forEach(el => el.addEventListener("change", validateForm));
+  document.getElementById("resetBtn").addEventListener("click", resetForm);
+});
